@@ -1,0 +1,18 @@
+Question No - 1
+SELECT  COUNT(*) FROM salespeople WHERE Sname LIKE 'a%' ;
+
+
+Question No - 2
+SELECT  *  FROM salespeople INNER JOIN orders on salespeople.Snum = orders.Snum WHERE Amt > 2000;
+
+
+Question No - 3
+SELECT  COUNT(*) FROM salespeople WHERE city = 'NewYork';
+
+
+Question No - 4
+SELECT * FROM salespeople where city in('london','paris');
+
+
+Question No - 5
+SELECT b.Sname,COUNT(a.onum),a.odate FROM ORDERS a inner join salespeople b where a.Snum=b.Snum group by b.Snum;
